@@ -100,7 +100,7 @@ def rona(update, context):
 
     from random import choice
     secilen = choice(cumleler)
-    mesaj = f"👑 {user} dedi ki:\n\n“{secilen}”"
+    mesaj = f"👑 Rona dedi ki:\n\n“{secilen}”"
     update.message.reply_text(mesaj)
 
 def esma(update, context):
@@ -131,7 +131,7 @@ def esma(update, context):
 
     from random import choice
     secilen = choice(cumleler)
-    mesaj = f"💫 {user} dedi ki:\n\n{secilen}"
+    mesaj = f"💫 Esma dedi ki:\n\n{secilen}"
     update.message.reply_text(mesaj)
 
 def yargi(update, context):
@@ -322,7 +322,7 @@ def saril(update, context):
     ]
 
     secilen_gif = random.choice(gif_listesi)
-    mesaj = f"🤗 {user}, bu sarılma senin için. Hem sıcak, hem içten. 🩵"
+    mesaj = f"🤗 {user}, bu senin için. Hem sıcak, hem içten. 🩵"
     context.bot.send_animation(chat_id=update.effective_chat.id, animation=secilen_gif, caption=mesaj)
 
 def askitirafi(update, context):
