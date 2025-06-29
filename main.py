@@ -312,14 +312,13 @@ def kamyoncu(update, context):
 def saril(update, context):
     user = update.message.from_user.first_name
 
-    gif_listesi = [
-        "https://media.tenor.com/qxk1XWY5R7MAAAAC/hug-anime.gif",
-        "https://media.tenor.com/YPD8UppSboQAAAAC/anime-hug-cute.gif",
-        "https://media.tenor.com/yV1ejJi7txYAAAAC/anime-couple-hug.gif",
-        "https://media.tenor.com/KmznKUPV3EQAAAAC/anime-love.gif",
-        "https://media.tenor.com/ovVgWmbmK50AAAAd/hug-anime-love.gif",
-        "https://media.tenor.com/iqxH3eW1edkAAAAC/jujutsu-kaisen-hug.gif"
-    ]
+  gif_listesi = [
+    "https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif",
+    "https://media.giphy.com/media/xT0BKiK5sOCVdBUhiM/giphy.gif",
+    "https://media.giphy.com/media/143v0Z4767T15e/giphy.gif",
+    "https://media.giphy.com/media/BXrwTdoho6hkQ/giphy.gif",
+    "https://i.ibb.co/Y0LsjCn/hug.gif"
+]
 
     secilen_gif = random.choice(gif_listesi)
     mesaj = f"🤗 {user}, bu senin için. Hem sıcak, hem içten. 🩵"
