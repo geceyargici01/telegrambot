@@ -308,19 +308,17 @@ def kamyoncu(update, context):
     secilen = random.choice(sozler)
     mesaj = f"🚚 {user} dedi ki:\n\n“{secilen}”"
     update.message.reply_text(mesaj)
-
 def saril(update, context):
-    saril_resimleri = [
-        "https://i.ibb.co/HHFrfqg/anime-hug1.jpg",
-        "https://i.ibb.co/m0hFSTc/anime-hug2.jpg",
-        "https://i.ibb.co/VvJ2KpC/anime-hug3.jpg",
-        "https://i.ibb.co/58QwzKd/anime-hug4.jpg",
-        "https://i.ibb.co/Z1vxtCV/anime-hug5.jpg"
+    saril_sozleri = [
+        "🤗 İçten bir sarılma yolluyorum... hem de sessizce sarmalayan cinsten.",
+        "🫂 Şu anda yanındaymışım gibi düşün ve kendini bırak...",
+        "❤️ Bazen kelimeler yetmez... o yüzden sadece sarılıyorum.",
+        "✨ Sarılmak bazen her şeyin cevabıdır. Al sana bir doz umut.",
+        "🥹 Bugün bunu hak ettin. Sıcacık, yavaşça gelen bir sarılma..."
     ]
-    secilen_resim = random.choice(saril_resimleri)
-    mesaj = "🤗 İçten bir sarılma yolluyorum... hem de sessizce sarmalayan cinsten."
-    context.bot.send_photo(chat_id=update.effective_chat.id, photo=secilen_resim)
+    mesaj = random.choice(saril_sozleri)
     context.bot.send_message(chat_id=update.effective_chat.id, text=mesaj)
+
 
 
 def askitirafi(update, context):
@@ -353,12 +351,7 @@ def askitirafi(update, context):
     mesaj = f"📝 {user}, işte bugünkü aşk itirafın:\n\n\"{secilen}\""
     update.message.reply_text(mesaj)
 
-def kimebenziyorum(update, context):
-    kisi = random.choice(kimebenziyorum_listesi)
- mesaj = f"{update.message.from_user.first_name}, bence sen {kisi}’ye benziyorsun 😎"
-    context.bot.send_message(chat_id=update.effective_chat.id, text=mesaj)
-
-  kimebenziyorum_listesi = [
+kimebenziyorum_listesi = [
     "Leonardo DiCaprio",
     "Brad Pitt",
     "Johnny Depp",
@@ -380,6 +373,11 @@ def kimebenziyorum(update, context):
     "Barış Arduç",
     "Hande Erçel"
 ]
+
+def kimebenziyorum(update, context):
+    kisi = random.choice(kimebenziyorum_listesi)
+    mesaj = f"{update.message.from_user.first_name}, bence sen {kisi}’ye benziyorsun 😎"
+    context.bot.send_message(chat_id=update.effective_chat.id, text=mesaj)
 
 
 
