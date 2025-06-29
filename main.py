@@ -354,65 +354,34 @@ def askitirafi(update, context):
     update.message.reply_text(mesaj)
 
 def kimebenziyorum(update, context):
-    user = update.message.from_user.first_name
+    kisi = random.choice(kimebenziyorum_listesi)
+ mesaj = f"{update.message.from_user.first_name}, bence sen {kisi}’ye benziyorsun 😎"
+    context.bot.send_message(chat_id=update.effective_chat.id, text=mesaj)
 
-    unlu_listesi = [
-         ("Kıvanç Tatlıtuğ", "https://i.ibb.co/wS2kpyZ/kivanc.jpg"),
-    ("Barış Arduç", "https://i.ibb.co/N3CN4zC/baris-arduc.jpg"),
-    ("Kenan İmirzalioğlu", "https://i.ibb.co/fS6n7W9/kenan.jpg"),
-    ("Tarkan", "https://i.ibb.co/LS3QTvx/tarkan.jpg"),
-    ("Murat Boz", "https://i.ibb.co/PWdsFrW/murat-boz.jpg"),
-    ("Haluk Bilginer", "https://i.ibb.co/PFvMzCg/haluk.jpg"),
-    ("Engin Akyürek", "https://i.ibb.co/7NkMhC1/engin-akyurek.jpg"),
-    ("Çağatay Ulusoy", "https://i.ibb.co/vmQrcVR/cagatay.jpg"),
-    ("Nejat İşler", "https://i.ibb.co/hLBknFT/nejat.jpg"),
-    ("Halit Ergenç", "https://i.ibb.co/k9YmVnr/halit.jpg"),
-    ("Brad Pitt", "https://i.ibb.co/mFrnWxR/bradpitt.jpg"),
-    ("Ryan Gosling", "https://i.ibb.co/TbNPtRP/ryangosling.jpg"),
-    ("Johnny Depp", "https://i.ibb.co/6Bt0rZy/johnnydepp.jpg"),
-    ("Tom Hardy", "https://i.ibb.co/8XrPxw4/tomhardy.jpg"),
-    ("Leonardo DiCaprio", "https://i.ibb.co/j3vztXy/leo.jpg"),
-    ("Elvis Presley", "https://i.ibb.co/Vt9WTzM/elvis.jpg"),
-    ("Keanu Reeves", "https://i.ibb.co/vZT8cV7/keanu.jpg"),
-    ("Zeki Müren", "https://i.ibb.co/1ncbD2z/zeki.jpg"),
-    ("Cem Yılmaz", "https://i.ibb.co/Jm3kQbH/cemyilmaz.jpg"),
-    ("Recep İvedik", "https://i.ibb.co/gjD5SgQ/recep.jpg"),
-         ("Serenay Sarıkaya", "https://i.ibb.co/9Z4Gp9n/serenay.jpg"),
-    ("Beren Saat", "https://i.ibb.co/k8xMN6G/beren.jpg"),
-    ("Demet Özdemir", "https://i.ibb.co/tKHxrMJ/demet.jpg"),
-    ("Tuba Büyüküstün", "https://i.ibb.co/WvWzjqk/tuba.jpg"),
-    ("Sıla", "https://i.ibb.co/qp4bVdK/sila.jpg"),
-    ("Hande Erçel", "https://i.ibb.co/N9WfzRW/hande.jpg"),
-    ("Hazal Kaya", "https://i.ibb.co/LN5HPTh/hazal.jpg"),
-    ("Bensu Soral", "https://i.ibb.co/Dkx8Sw9/bensu.jpg"),
-    ("Aslı Enver", "https://i.ibb.co/yFt9zyX/asli.jpg"),
-    ("Elçin Sangu", "https://i.ibb.co/Z1tz0YB/elcin.jpg"),
-    ("Ebru Gündeş", "https://i.ibb.co/VVCFsZz/ebru.jpg"),
-    ("Ajda Pekkan", "https://i.ibb.co/KK8XY4P/ajda.jpg"),
-    ("Seda Sayan", "https://i.ibb.co/f1MR7Rf/seda.jpg"),
-    ("Sezen Aksu", "https://i.ibb.co/sFhysFr/sezen.jpg"),
-    ("Angelina Jolie", "https://i.ibb.co/jbKxWdy/jolie.jpg"),
-    ("Scarlett Johansson", "https://i.ibb.co/VSkMBZT/scarlett.jpg"),
-    ("Margot Robbie", "https://i.ibb.co/xXGLgzD/margot.jpg"),
-    ("Emma Watson", "https://i.ibb.co/fpLHTfJ/emma.jpg"),
-    ("Gal Gadot", "https://i.ibb.co/0Gbvmf6/gal.jpg"),
-    ("Megan Fox", "https://i.ibb.co/NV9nW6B/megan.jpg"),
-    ("Zendaya", "https://i.ibb.co/ZMgJ5Tp/zendaya.jpg"),
-    ("Anne Hathaway", "https://i.ibb.co/5vN8Ms5/anne.jpg"),
-    ("Natalie Portman", "https://i.ibb.co/5xy3mhC/natalie.jpg"),
-    ("Ariana Grande", "https://i.ibb.co/2nhTRJW/ariana.jpg"),
-    ("Billie Eilish", "https://i.ibb.co/ZfTZLNC/billie.jpg"),
-    ("Dua Lipa", "https://i.ibb.co/V92pJ6q/dua.jpg"),
-    ("Lady Gaga", "https://i.ibb.co/nzC9rPC/gaga.jpg"),
-    ("Beyoncé", "https://i.ibb.co/XYpTVgD/beyonce.jpg"),
-    ("Rihanna", "https://i.ibb.co/nzyKTLT/rihanna.jpg")
-    ]
+  kimebenziyorum_listesi = [
+    "Leonardo DiCaprio",
+    "Brad Pitt",
+    "Johnny Depp",
+    "Ryan Gosling",
+    "Cillian Murphy",
+    "Tom Holland",
+    "Scarlett Johansson",
+    "Margot Robbie",
+    "Zendaya",
+    "Gal Gadot",
+    "Robert Pattinson",
+    "Keanu Reeves",
+    "Angelina Jolie",
+    "Emma Watson",
+    "Harry Styles",
+    "Zayn Malik",
+    "Chris Hemsworth",
+    "Ebru Şahin",
+    "Barış Arduç",
+    "Hande Erçel"
+]
 
-    secilen = random.choice(unlu_listesi)
-    isim, foto_url = secilen
 
-    caption = f"📸 {user}, sen bana bayağı {isim} havası veriyorsun 😎"
-    context.bot.send_photo(chat_id=update.effective_chat.id, photo=foto_url, caption=caption)
 
 def dovusmuzik(update, context):
     user = update.message.from_user
