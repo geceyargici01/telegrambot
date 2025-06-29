@@ -521,3 +521,6 @@ def start_bot():
     print("✅ Cipiti polling başlattı!")
     updater.start_polling()
     updater.idle()
+
+if __name__ == '__main__':
+    start_bot()
