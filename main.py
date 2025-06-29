@@ -513,7 +513,7 @@ def start_bot():
     dp.add_handler(CommandHandler("yargi", yargi))
     dp.add_handler(CommandHandler("kimdir", kimdir))
     dp.add_handler(CommandHandler("kamyoncu", kamyoncu))
-    dp.add_handler(CommandHandler("sarıl", saril))
+    dp.add_handler(CommandHandler("sarıl", sarıl))
     dp.add_handler(CommandHandler("askitirafi", askitirafi))
     dp.add_handler(CommandHandler("kimebenziyorum", kimebenziyorum))
     dp.add_handler(CommandHandler("dovusmuzik", dovusmuzik,))
