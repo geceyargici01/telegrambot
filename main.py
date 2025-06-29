@@ -310,19 +310,19 @@ def kamyoncu(update, context):
     update.message.reply_text(mesaj)
 
 def saril(update, context):
-    user = update.message.from_user.first_name
-
-  gif_listesi = [
-    "https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif",
-    "https://media.giphy.com/media/xT0BKiK5sOCVdBUhiM/giphy.gif",
-    "https://media.giphy.com/media/143v0Z4767T15e/giphy.gif",
-    "https://media.giphy.com/media/BXrwTdoho6hkQ/giphy.gif",
-    "https://i.ibb.co/Y0LsjCn/hug.gif"
-]
-
+    gif_listesi = [
+        "https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif",
+        "https://media.giphy.com/media/xT0BKiK5sOCVdBUhiM/giphy.gif",
+        "https://media.giphy.com/media/143v0Z4767T15e/giphy.gif",
+        "https://media.giphy.com/media/BXrwTdoho6hkQ/giphy.gif",
+        "https://i.ibb.co/Y0LsjCn/hug.gif"
+    ]
     secilen_gif = random.choice(gif_listesi)
-    mesaj = f"🤗 {user}, bu senin için. Hem sıcak, hem içten. 🩵"
-    context.bot.send_animation(chat_id=update.effective_chat.id, animation=secilen_gif, caption=mesaj)
+    mesaj = f"🫂 Bu sarılma sana gelsin! Hem sıcak, hem içten..."
+    context.bot.send_animation(chat_id=update.effective_chat.id, animation=secilen_gif)
+    context.bot.send_message(chat_id=update.effective_chat.id, text=mesaj)
+
+
 
 def askitirafi(update, context):
     user = update.message.from_user.first_name
