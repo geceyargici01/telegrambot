@@ -310,18 +310,17 @@ def kamyoncu(update, context):
     update.message.reply_text(mesaj)
 
 def saril(update, context):
-    gif_listesi = [
-        "https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif",
-        "https://media.giphy.com/media/xT0BKiK5sOCVdBUhiM/giphy.gif",
-        "https://media.giphy.com/media/143v0Z4767T15e/giphy.gif",
-        "https://media.giphy.com/media/BXrwTdoho6hkQ/giphy.gif",
-        "https://i.ibb.co/Y0LsjCn/hug.gif"
+    saril_resimleri = [
+        "https://i.ibb.co/HHFrfqg/anime-hug1.jpg",
+        "https://i.ibb.co/m0hFSTc/anime-hug2.jpg",
+        "https://i.ibb.co/VvJ2KpC/anime-hug3.jpg",
+        "https://i.ibb.co/58QwzKd/anime-hug4.jpg",
+        "https://i.ibb.co/Z1vxtCV/anime-hug5.jpg"
     ]
-    secilen_gif = random.choice(gif_listesi)
-    mesaj = f"🫂 Bu sarılma sana gelsin! Hem sıcak, hem içten..."
-    context.bot.send_animation(chat_id=update.effective_chat.id, animation=secilen_gif)
+    secilen_resim = random.choice(saril_resimleri)
+    mesaj = "🤗 İçten bir sarılma yolluyorum... hem de sessizce sarmalayan cinsten."
+    context.bot.send_photo(chat_id=update.effective_chat.id, photo=secilen_resim)
     context.bot.send_message(chat_id=update.effective_chat.id, text=mesaj)
-
 
 
 def askitirafi(update, context):
@@ -358,55 +357,55 @@ def kimebenziyorum(update, context):
     user = update.message.from_user.first_name
 
     unlu_listesi = [
-        ("Kıvanç Tatlıtuğ", "https://i.imgur.com/xnFHhls.jpg"),
-        ("Barış Arduç", "https://i.imgur.com/lR4Cby3.jpg"),
-        ("Kenan İmirzalioğlu", "https://i.imgur.com/0hYkEpT.jpg"),
-        ("Tarkan", "https://i.imgur.com/fO3UcSG.jpg"),
-        ("Murat Boz", "https://i.imgur.com/m1LEsPv.jpg"),
-        ("Haluk Bilginer", "https://i.imgur.com/jDYuwSP.jpg"),
-        ("Engin Akyürek", "https://i.imgur.com/fDpH3wG.jpg"),
-        ("Çağatay Ulusoy", "https://i.imgur.com/G4Lo0XP.jpg"),
-        ("Nejat İşler", "https://i.imgur.com/V7RFMqB.jpg"),
-        ("Halit Ergenç", "https://i.imgur.com/gKKfPiX.jpg"),
-        ("Brad Pitt", "https://i.imgur.com/H1n4ew5.jpg"),
-        ("Ryan Gosling", "https://i.imgur.com/sTfAYO4.jpg"),
-        ("Johnny Depp", "https://i.imgur.com/WfnidOY.jpg"),
-        ("Tom Hardy", "https://i.imgur.com/UYkVo6J.jpg"),
-        ("Leonardo DiCaprio", "https://i.imgur.com/WrZDRqM.jpg"),
-        ("Elvis Presley", "https://i.imgur.com/Oo1Xzt6.jpg"),
-        ("Keanu Reeves", "https://i.imgur.com/lqKX5GZ.jpg"),
-        ("Zeki Müren", "https://i.imgur.com/q0rGMRB.jpg"),
-        ("Cem Yılmaz", "https://i.imgur.com/NdKhGxY.jpg"),
-        ("Recep İvedik", "https://i.imgur.com/fTW1uU2.jpg"),
-        ("Serenay Sarıkaya", "https://i.imgur.com/wEnF9PG.jpg"),
-        ("Beren Saat", "https://i.imgur.com/I3Cm0c7.jpg"),
-        ("Demet Özdemir", "https://i.imgur.com/dOwEDZz.jpg"),
-        ("Tuba Büyüküstün", "https://i.imgur.com/hIDqqRo.jpg"),
-        ("Sıla", "https://i.imgur.com/GikEvna.jpg"),
-        ("Hande Erçel", "https://i.imgur.com/4lRLb4S.jpg"),
-        ("Hazal Kaya", "https://i.imgur.com/Q5NHRT0.jpg"),
-        ("Bensu Soral", "https://i.imgur.com/Vh3dco9.jpg"),
-        ("Aslı Enver", "https://i.imgur.com/lhB5Z8m.jpg"),
-        ("Elçin Sangu", "https://i.imgur.com/bBzH49P.jpg"),
-        ("Ebru Gündeş", "https://i.imgur.com/nRMpMdP.jpg"),
-        ("Ajda Pekkan", "https://i.imgur.com/dQreQ57.jpg"),
-        ("Seda Sayan", "https://i.imgur.com/YUOB3jh.jpg"),
-        ("Sezen Aksu", "https://i.imgur.com/xGlmZfP.jpg"),
-        ("Angelina Jolie", "https://i.imgur.com/K3n9Ptn.jpg"),
-        ("Scarlett Johansson", "https://i.imgur.com/hY2lj6a.jpg"),
-        ("Margot Robbie", "https://i.imgur.com/UmoRld5.jpg"),
-        ("Emma Watson", "https://i.imgur.com/t0VYlDZ.jpg"),
-        ("Gal Gadot", "https://i.imgur.com/3PTs96P.jpg"),
-        ("Megan Fox", "https://i.imgur.com/1iqGrOf.jpg"),
-        ("Zendaya", "https://i.imgur.com/LikR9Q9.jpg"),
-        ("Anne Hathaway", "https://i.imgur.com/9K3Bq8Z.jpg"),
-        ("Natalie Portman", "https://i.imgur.com/jYuZskt.jpg"),
-        ("Ariana Grande", "https://i.imgur.com/SEWhEvX.jpg"),
-        ("Billie Eilish", "https://i.imgur.com/2lU2N2E.jpg"),
-        ("Dua Lipa", "https://i.imgur.com/lVR3sAw.jpg"),
-        ("Lady Gaga", "https://i.imgur.com/VO3BYY5.jpg"),
-        ("Beyoncé", "https://i.imgur.com/l8V9M4y.jpg"),
-        ("Rihanna", "https://i.imgur.com/65Ar2Bb.jpg")
+         ("Kıvanç Tatlıtuğ", "https://i.ibb.co/wS2kpyZ/kivanc.jpg"),
+    ("Barış Arduç", "https://i.ibb.co/N3CN4zC/baris-arduc.jpg"),
+    ("Kenan İmirzalioğlu", "https://i.ibb.co/fS6n7W9/kenan.jpg"),
+    ("Tarkan", "https://i.ibb.co/LS3QTvx/tarkan.jpg"),
+    ("Murat Boz", "https://i.ibb.co/PWdsFrW/murat-boz.jpg"),
+    ("Haluk Bilginer", "https://i.ibb.co/PFvMzCg/haluk.jpg"),
+    ("Engin Akyürek", "https://i.ibb.co/7NkMhC1/engin-akyurek.jpg"),
+    ("Çağatay Ulusoy", "https://i.ibb.co/vmQrcVR/cagatay.jpg"),
+    ("Nejat İşler", "https://i.ibb.co/hLBknFT/nejat.jpg"),
+    ("Halit Ergenç", "https://i.ibb.co/k9YmVnr/halit.jpg"),
+    ("Brad Pitt", "https://i.ibb.co/mFrnWxR/bradpitt.jpg"),
+    ("Ryan Gosling", "https://i.ibb.co/TbNPtRP/ryangosling.jpg"),
+    ("Johnny Depp", "https://i.ibb.co/6Bt0rZy/johnnydepp.jpg"),
+    ("Tom Hardy", "https://i.ibb.co/8XrPxw4/tomhardy.jpg"),
+    ("Leonardo DiCaprio", "https://i.ibb.co/j3vztXy/leo.jpg"),
+    ("Elvis Presley", "https://i.ibb.co/Vt9WTzM/elvis.jpg"),
+    ("Keanu Reeves", "https://i.ibb.co/vZT8cV7/keanu.jpg"),
+    ("Zeki Müren", "https://i.ibb.co/1ncbD2z/zeki.jpg"),
+    ("Cem Yılmaz", "https://i.ibb.co/Jm3kQbH/cemyilmaz.jpg"),
+    ("Recep İvedik", "https://i.ibb.co/gjD5SgQ/recep.jpg")
+         ("Serenay Sarıkaya", "https://i.ibb.co/9Z4Gp9n/serenay.jpg"),
+    ("Beren Saat", "https://i.ibb.co/k8xMN6G/beren.jpg"),
+    ("Demet Özdemir", "https://i.ibb.co/tKHxrMJ/demet.jpg"),
+    ("Tuba Büyüküstün", "https://i.ibb.co/WvWzjqk/tuba.jpg"),
+    ("Sıla", "https://i.ibb.co/qp4bVdK/sila.jpg"),
+    ("Hande Erçel", "https://i.ibb.co/N9WfzRW/hande.jpg"),
+    ("Hazal Kaya", "https://i.ibb.co/LN5HPTh/hazal.jpg"),
+    ("Bensu Soral", "https://i.ibb.co/Dkx8Sw9/bensu.jpg"),
+    ("Aslı Enver", "https://i.ibb.co/yFt9zyX/asli.jpg"),
+    ("Elçin Sangu", "https://i.ibb.co/Z1tz0YB/elcin.jpg"),
+    ("Ebru Gündeş", "https://i.ibb.co/VVCFsZz/ebru.jpg"),
+    ("Ajda Pekkan", "https://i.ibb.co/KK8XY4P/ajda.jpg"),
+    ("Seda Sayan", "https://i.ibb.co/f1MR7Rf/seda.jpg"),
+    ("Sezen Aksu", "https://i.ibb.co/sFhysFr/sezen.jpg"),
+    ("Angelina Jolie", "https://i.ibb.co/jbKxWdy/jolie.jpg"),
+    ("Scarlett Johansson", "https://i.ibb.co/VSkMBZT/scarlett.jpg"),
+    ("Margot Robbie", "https://i.ibb.co/xXGLgzD/margot.jpg"),
+    ("Emma Watson", "https://i.ibb.co/fpLHTfJ/emma.jpg"),
+    ("Gal Gadot", "https://i.ibb.co/0Gbvmf6/gal.jpg"),
+    ("Megan Fox", "https://i.ibb.co/NV9nW6B/megan.jpg"),
+    ("Zendaya", "https://i.ibb.co/ZMgJ5Tp/zendaya.jpg"),
+    ("Anne Hathaway", "https://i.ibb.co/5vN8Ms5/anne.jpg"),
+    ("Natalie Portman", "https://i.ibb.co/5xy3mhC/natalie.jpg"),
+    ("Ariana Grande", "https://i.ibb.co/2nhTRJW/ariana.jpg"),
+    ("Billie Eilish", "https://i.ibb.co/ZfTZLNC/billie.jpg"),
+    ("Dua Lipa", "https://i.ibb.co/V92pJ6q/dua.jpg"),
+    ("Lady Gaga", "https://i.ibb.co/nzC9rPC/gaga.jpg"),
+    ("Beyoncé", "https://i.ibb.co/XYpTVgD/beyonce.jpg"),
+    ("Rihanna", "https://i.ibb.co/nzyKTLT/rihanna.jpg")
     ]
 
     secilen = random.choice(unlu_listesi)
