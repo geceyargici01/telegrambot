@@ -376,7 +376,7 @@ def kimebenziyorum(update, context):
     ("Keanu Reeves", "https://i.ibb.co/vZT8cV7/keanu.jpg"),
     ("Zeki Müren", "https://i.ibb.co/1ncbD2z/zeki.jpg"),
     ("Cem Yılmaz", "https://i.ibb.co/Jm3kQbH/cemyilmaz.jpg"),
-    ("Recep İvedik", "https://i.ibb.co/gjD5SgQ/recep.jpg")
+    ("Recep İvedik", "https://i.ibb.co/gjD5SgQ/recep.jpg"),
          ("Serenay Sarıkaya", "https://i.ibb.co/9Z4Gp9n/serenay.jpg"),
     ("Beren Saat", "https://i.ibb.co/k8xMN6G/beren.jpg"),
     ("Demet Özdemir", "https://i.ibb.co/tKHxrMJ/demet.jpg"),
