@@ -469,7 +469,7 @@ def tokat(update, context):
 
 def start_bot():
     print("🚨 Cipiti debug: BOT BAŞLIYOR...")
-    updater = Updater(TOKEN, use_context=True)
+    updater = Updater(token=TOKEN, use_context=True)
     dp = updater.dispatcher
 
     dp.add_handler(MessageHandler(Filters.text & ~Filters.command, track_users))
