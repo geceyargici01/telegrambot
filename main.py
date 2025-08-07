@@ -1,3 +1,9 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv("TOKEN")
+
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import random
 
@@ -463,7 +469,6 @@ def tokat(update, context):
 
 def start_bot():
     print("🚨 Cipiti debug: BOT BAŞLIYOR...")
-    TOKEN = '7755024967:AAHZpLa1vvVkZ0yM-ke9s4Iznupoylctgek'
     updater = Updater(TOKEN, use_context=True)
     dp = updater.dispatcher
 
