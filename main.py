@@ -1,8 +1,12 @@
 import os
 from dotenv import load_dotenv
+from telegram.ext import Updater
 
 load_dotenv()
 TOKEN = os.getenv("TOKEN")
+print("Token:", TOKEN)  # Geçici test satırı
+
+updater = Updater(token=TOKEN, use_context=True)
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import random
